@@ -1,0 +1,16 @@
+<!-- works in Angular 15 + Angular Material 15 as of April 25, 2023 -->
+<mat-toolbar color="primary">
+  <mat-toolbar-row #toolbarRow> 
+    <span>tijeri Bank Import &nbsp;</span>
+    <ng-template ngFor let-link="$implicit" [ngForOf]="links">
+      <a
+        mat-button
+        [routerLink]="link.path"
+        [routerLinkActive]="['mat-button-toggle-checked', 'active-route']"
+        #rla="routerLinkActive"
+      >
+        {{ link.label }}</a
+      >
+    </ng-template>
+  </mat-toolbar-row>
+</mat-toolbar>

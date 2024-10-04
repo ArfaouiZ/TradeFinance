@@ -1,0 +1,188 @@
+<div class="form-container">
+    <form>
+      <div class="form-row">
+        <mat-form-field class="form-field">
+          <mat-label>Réf. / Année RDI</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+  
+        <mat-form-field class="form-field">
+          <mat-label>Date Ouverture</mat-label>
+          <input matInput [matDatepicker]="picker1">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+          <mat-datepicker #picker1 disabled="false"></mat-datepicker>
+        </mat-form-field>
+      </div>
+  
+      <div class="form-row">
+        <mat-form-field class="form-field">
+          <mat-label>Ref. correspondant</mat-label>
+          <input matInput type="text" required>
+        </mat-form-field>
+  
+        <mat-form-field class="form-field">
+          <mat-label>Pays correspondant</mat-label>
+          <mat-select required>
+            <mat-option value="" disabled>Veuillez choisir</mat-option>
+            <!-- Add options here -->
+          </mat-select>
+        </mat-form-field>
+      </div>
+  
+      <div class="form-row">
+        <mat-form-field class="form-field">
+          <mat-label>Date envoie des documents</mat-label>
+          <input matInput [matDatepicker]="picker2">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker2"></mat-datepicker-toggle>
+          <mat-datepicker #picker2></mat-datepicker>
+        </mat-form-field>
+  
+        <mat-form-field class="form-field">
+          <mat-label>Date reception des documents</mat-label>
+          <input matInput [matDatepicker]="picker3">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker3"></mat-datepicker-toggle>
+          <mat-datepicker #picker3></mat-datepicker>
+        </mat-form-field>
+      </div>
+  
+      <div class="form-row">
+        <mat-form-field class="form-field">
+          <mat-label>Désignation correspondant</mat-label>
+          <input matInput type="text" required>
+          <button mat-icon-button matSuffix>
+            <mat-icon>search</mat-icon>
+          </button>
+        </mat-form-field>
+  
+        <mat-form-field class="form-field">
+          <mat-label>Code SWIFT</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+      </div>
+  
+      <div class="form-row">
+        <mat-form-field class="form-field full-width">
+          <mat-label>Adresse correspondant</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+      </div>
+    </form>
+</div>
+<!-- --------------------->
+ <h1>donneur d ordre </h1>
+<div class="form-container">
+    <form>
+      <!-- Row 1: Compte de règlement and Code client -->
+      <div class="form-row">
+        <mat-form-field class="form-field">
+          <mat-label>Compte de règlement</mat-label>
+          <mat-select required>
+            <mat-option value="" disabled>Select account</mat-option>
+            <!-- Add account options here -->
+          </mat-select>
+        </mat-form-field>
+  
+        <mat-form-field class="form-field">
+          <mat-label>Code client</mat-label>
+          <input matInput type="text">
+          <button mat-icon-button matSuffix>
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+      </div>
+  
+      <!-- Row 2: NOM / RS and Identité -->
+      <div class="form-row">
+        <mat-form-field class="form-field">
+          <mat-label>NOM / RS</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+  
+        <mat-form-field class="form-field">
+          <mat-label>Identité</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+      </div>
+  
+      <!-- Row 3: Matricule fiscale and Adresse -->
+      <div class="form-row">
+        <mat-form-field class="form-field">
+          <mat-label>Matricule fiscale</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+  
+        <mat-form-field class="form-field full-width">
+          <mat-label>Adresse</mat-label>
+          <input matInput type="text" required>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+<!-- ------------------------- -->
+ <h1>Tireur</h1>
+ <div class="form-container">
+    <form>
+      <!-- Row 1: Nom/RS, Adresse, Ville -->
+      <div class="form-row">
+        <mat-form-field class="form-field">
+          <mat-label>Nom/RS</mat-label>
+          <input matInput type="text" required>
+        </mat-form-field>
+  
+        <mat-form-field class="form-field full-width">
+          <mat-label>Adresse</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+  
+        <mat-form-field class="form-field">
+          <mat-label>Ville</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+      </div>
+  
+      <!-- Row 2: Code Postal, Agence -->
+      <div class="form-row">
+        <mat-form-field class="form-field">
+          <mat-label>Code Postal</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+  
+        <mat-form-field class="form-field">
+          <mat-label>Agence</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+      </div>
+  
+      <!-- Row 3: Compte, Swift Agc, N° Facture, Date Facture -->
+      <div class="form-row">
+        <mat-form-field class="form-field">
+          <mat-label>Compte</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+  
+        <mat-form-field class="form-field">
+          <mat-label>Swift Agc</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+  
+        <mat-form-field class="form-field">
+          <mat-label>N° Facture</mat-label>
+          <input matInput type="text">
+        </mat-form-field>
+  
+        <!-- Date Facture Field -->
+        <mat-form-field class="form-field">
+          <mat-label>Date Facture</mat-label>
+          <input matInput [matDatepicker]="datePicker">
+          <mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+          <mat-datepicker #datePicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+  <div class="button-row">
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </div>
