@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
-import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { HttpClientModule } from '@angular/common/http';
 
@@ -9,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CustomMaterialModule } from './shared/custom-material.module';
 //NO LONGER SUPPORTED: import { FlexLayoutModule } from '@angular/flex-layout';
 //
-import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
@@ -31,6 +29,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { FormInputComponent } from './titres/form-input/form-input.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+
+
+
 import { ClientDialogComponent } from './clients/client-dialog/client-dialog.component';
 
 @NgModule({
@@ -49,6 +53,10 @@ import { ClientDialogComponent } from './clients/client-dialog/client-dialog.com
     CdiComponent,
     RdiComponent,
     VeComponent,
+    FormInputComponent,
+    
+   
+    VeComponent,
     ClientDialogComponent
   ],
   imports: [
@@ -60,11 +68,14 @@ import { ClientDialogComponent } from './clients/client-dialog/client-dialog.com
     CustomMaterialModule,
     AppRoutingModule,
     MatInputModule ,
-    MatFormFieldModule,
-    MatSelectModule,
-    MatIconModule,
-    MatButtonModule,
-    HttpClientModule,
+MatFormFieldModule,
+MatSelectModule,
+ MatIconModule,
+ MatButtonModule,
+ MatDialogModule,
+ ReactiveFormsModule,
+ HttpClientModule
+
   ],
   providers: [
     {

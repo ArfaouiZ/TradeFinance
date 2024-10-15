@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Create/Edit Titre</h2>
+<mat-dialog-content [formGroup]="form">
+  <mat-form-field>
+    <mat-label>Montant Titre</mat-label>
+    <input matInput formControlName="montantTitre" type="number">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Montant Utilisé</mat-label>
+    <input matInput formControlName="montantUtilise" type="number">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Montant Disponible</mat-label>
+    <input matInput formControlName="montantDisponible" type="number">
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Type Titre</mat-label>
+    <mat-select formControlName="typeTitre">
+      <mat-option value="Import">Import</mat-option>
+      <mat-option value="Export">Export</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Date Domiciliation</mat-label>
+    <input matInput formControlName="dateDomiciliation" type="date">
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="form.invalid">Save</button>
+</mat-dialog-actions>
