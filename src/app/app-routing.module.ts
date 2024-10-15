@@ -15,12 +15,12 @@ import { VeComponent } from './ve/ve.component';
 
 const routes: Routes = [
   { path: 'clients', component: ClientsComponent, data: { label: 'Clients' } },
-  { path: 'cdi', component: CdiComponent, data: { label: ' CDI' } },
-  { path: 'rdi', component: RdiComponent, data: { label: 'RDI ' } },
-  { path: 'picturegrid', component: VeComponent, data: { label: 'VE'}},
+  /* { path: 'cdi', component: CdiComponent, data: { label: ' CDI' } }, */
+  /*   { path: 'rdi', component: RdiComponent, data: { label: 'RDI ' } },*/
+  /* { path: 'picturegrid', component: VeComponent, data: { label: 'VE'}}, */
   { path: 'titres', component: TitresComponent, data: { label: 'titres' } },
-  { path: 'tradis', component: TradisComponent, data: { label: 'tradis' } },
-  { path: 'tsc', component: TscComponent, data: { label: 'tsc' } },
+  /* { path: 'tradis', component: TradisComponent, data: { label: 'tradis' } }, */
+  /* { path: 'tsc', component: TscComponent, data: { label: 'tsc' } }, */
   { path: '', redirectTo: 'clients', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
