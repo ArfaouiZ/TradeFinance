@@ -36,6 +36,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { ClientDialogComponent } from './clients/client-dialog/client-dialog.component';
+import { ReglementComponent } from './reglement/reglement.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import { ClientDialogComponent } from './clients/client-dialog/client-dialog.com
     
    
     VeComponent,
-    ClientDialogComponent
+    ClientDialogComponent,
+    ReglementComponent
   ],
   imports: [
     ReactiveFormsModule,
