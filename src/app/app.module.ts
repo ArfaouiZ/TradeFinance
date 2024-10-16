@@ -36,6 +36,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { ClientDialogComponent } from './clients/client-dialog/client-dialog.component';
+import { ReglementsComponent } from './reglement/reglement.component';
+import { FormInputReglementComponent } from './reglement/form-input-reglement/form-input-reglement.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,10 @@ import { ClientDialogComponent } from './clients/client-dialog/client-dialog.com
     
    
     VeComponent,
-    ClientDialogComponent
+    ClientDialogComponent,
+    ReglementsComponent,
+    FormInputReglementComponent,
+    
   ],
   imports: [
     ReactiveFormsModule,
@@ -74,7 +79,8 @@ MatSelectModule,
  MatButtonModule,
  MatDialogModule,
  ReactiveFormsModule,
- HttpClientModule
+ HttpClientModule,
+ MatIconModule, 
 
   ],
   providers: [

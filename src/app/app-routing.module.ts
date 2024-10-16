@@ -12,15 +12,12 @@ import { ClientsComponent } from './clients/clients.component';
 import { CdiComponent } from './cdi/cdi.component';
 import { RdiComponent } from './rdi/rdi.component';
 import { VeComponent } from './ve/ve.component';
+import { ReglementsComponent } from './reglement/reglement.component';
 
 const routes: Routes = [
   { path: 'clients', component: ClientsComponent, data: { label: 'Clients' } },
-  { path: 'cdi', component: CdiComponent, data: { label: ' CDI' } },
-  { path: 'rdi', component: RdiComponent, data: { label: 'RDI ' } },
-  { path: 'picturegrid', component: VeComponent, data: { label: 'VE'}},
   { path: 'titres', component: TitresComponent, data: { label: 'titres' } },
-  { path: 'tradis', component: TradisComponent, data: { label: 'tradis' } },
-  { path: 'tsc', component: TscComponent, data: { label: 'tsc' } },
+  { path: 'reglement', component: ReglementsComponent, data: { label: 'reglement' } },
   { path: '', redirectTo: 'clients', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

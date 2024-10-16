@@ -1,0 +1,48 @@
+<h2 mat-dialog-title>Create/Edit Reglement</h2>
+<mat-dialog-content [formGroup]="form">
+  <!-- Montant Reglement -->
+  <mat-form-field>
+    <mat-label>Montant</mat-label>
+    <input matInput formControlName="montant" type="number">
+  </mat-form-field>
+
+  <!-- Reference Reglement -->
+  <mat-form-field>
+    <mat-label>Référence</mat-label>
+    <input matInput formControlName="reference">
+  </mat-form-field>
+
+  <!-- Type Reglement -->
+  <mat-form-field>
+    <mat-label>Type Reglement</mat-label>
+    <mat-select formControlName="typeReglement">
+      <mat-option value="CDI">CDI</mat-option>
+      <mat-option value="RDI">RDI</mat-option>
+      <mat-option value="VE">VE</mat-option>
+      <mat-option value="TSC">TSC</mat-option>
+
+
+    </mat-select>
+  </mat-form-field>
+
+  <!-- Date Reglement -->
+  <mat-form-field>
+    <mat-label>Date Reglement</mat-label>
+    <input matInput formControlName="dateReglement" type="date">
+  </mat-form-field>
+
+  <!-- Client Dropdown -->
+  <mat-form-field>
+    <mat-label>Client</mat-label>
+    <mat-select formControlName="clientId">
+      <mat-option *ngFor="let client of clients" [value]="client.id">
+        {{ client.nom }}  <!-- Display client name in the dropdown -->
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" (click)="onSubmit()" [disabled]="form.invalid">Save</button>
+</mat-dialog-actions>
