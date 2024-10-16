@@ -10,8 +10,14 @@ import { CustomMaterialModule } from './shared/custom-material.module';
 //
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NavigationComponent } from './navigation/navigation.component';
-// routed components
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
@@ -24,20 +30,14 @@ import { ClientsComponent } from './clients/clients.component';
 import { CdiComponent } from './cdi/cdi.component';
 import { RdiComponent } from './rdi/rdi.component';
 import { VeComponent } from './ve/ve.component';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSelectModule } from '@angular/material/select';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
 import { FormInputComponent } from './titres/form-input/form-input.component';
-import { MatDialogModule } from '@angular/material/dialog';
-import { ReactiveFormsModule } from '@angular/forms';
-
-
-
 import { ClientDialogComponent } from './clients/client-dialog/client-dialog.component';
 import { ReglementsComponent } from './reglement/reglement.component';
 import { FormInputReglementComponent } from './reglement/form-input-reglement/form-input-reglement.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -56,12 +56,11 @@ import { FormInputReglementComponent } from './reglement/form-input-reglement/fo
     RdiComponent,
     VeComponent,
     FormInputComponent,
-    
-   
     VeComponent,
     ClientDialogComponent,
     ReglementsComponent,
     FormInputReglementComponent,
+    
     
   ],
   imports: [
