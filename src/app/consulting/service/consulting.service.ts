@@ -8,7 +8,7 @@ import { Client } from 'src/app/clients/services/clientservice.service';
 })
 export class ConsultingService {
 
-  private apiUrl = 'http://localhost:8080/api/clients';  
+  private apiUrl = 'http://localhost:8080/api/reglement/client';  
 
   constructor(private http: HttpClient) { }
 
@@ -17,8 +17,9 @@ export class ConsultingService {
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
     });
+    let apx="http://localhost:8080/api/clients"
   
-    return this.http.get<Client[]>(this.apiUrl, { headers });
+    return this.http.get<Client[]>(apx, { headers });
   }
 
   getReglementsByClientId(clientId: number): Observable<any[]> {
