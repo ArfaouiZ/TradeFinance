@@ -22,6 +22,6 @@ export class ConsultingService {
   }
 
   getReglementsByClientId(clientId: number): Observable<any[]> {
-    return this.http.get<any[]>(`${this.apiUrl}/client/${clientId}`);
+    return this.http.get<any[]>(`${this.apiUrl}/${clientId}`);
   }
 }

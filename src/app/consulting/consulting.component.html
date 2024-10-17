@@ -2,7 +2,7 @@
     <mat-label>Select Client</mat-label>
     <mat-select [(value)]="selectedClientId" (selectionChange)="onSelectClient($event.value)">
       <mat-option *ngFor="let client of clients" [value]="client">
-        {{ client.name }}
+        {{ client.nom }}
       </mat-option>
     </mat-select>
   </mat-form-field>
