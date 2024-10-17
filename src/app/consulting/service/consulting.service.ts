@@ -8,7 +8,7 @@ import { Client } from 'src/app/clients/services/clientservice.service';
 })
 export class ConsultingService {
 
-  private apiUrl = 'http://localhost:8080/api/reglement/client';  
+  private apiUrl = 'http://localhost:8080/api/reglements/client';  
 
   constructor(private http: HttpClient) { }
 
