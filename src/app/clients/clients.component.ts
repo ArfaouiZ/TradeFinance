@@ -11,6 +11,7 @@ import { ClientserviceService, Client } from './services/clientservice.service';
 export class ClientsComponent implements OnInit {
   displayedColumns: string[] = ['id', 'codeDouance', 'numeroCompte', 'nom', 'adresse', 'dateCreation', 'actions'];
   dataSource: Client[] = [];
+  shownTitles:any []=[];
 
   constructor(private dialog: MatDialog, private clientService: ClientserviceService) {}
 
@@ -65,5 +66,17 @@ export class ClientsComponent implements OnInit {
     this.clientService.deleteClient(element.id).subscribe(() => {
       this.loadClients();
     });
+  }
+
+  getTitles(clientid:number){
+    this.clientService.getTitles(clientid).subscribe({
+      next: (titles) => {
+        this.shownTitles = titles;
+      },
+      error: (error) => {
+        console.error('Error loading titles:', error);
+      }
+    });
+
   }
 }

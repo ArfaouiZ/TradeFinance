@@ -34,6 +34,7 @@ import { FormInputComponent } from './titres/form-input/form-input.component';
 import { ClientDialogComponent } from './clients/client-dialog/client-dialog.component';
 import { ReglementsComponent } from './reglement/reglement.component';
 import { FormInputReglementComponent } from './reglement/form-input-reglement/form-input-reglement.component';
+import { ConsultingComponent } from './consulting/consulting.component';
 
 
 
@@ -60,6 +61,7 @@ import { FormInputReglementComponent } from './reglement/form-input-reglement/fo
     ClientDialogComponent,
     ReglementsComponent,
     FormInputReglementComponent,
+    ConsultingComponent,
     
     
   ],

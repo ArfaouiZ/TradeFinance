@@ -41,4 +41,8 @@ export class ClientserviceService {
   deleteClient(clientId: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${clientId}`);
   }
+
+  getTitles(clientId:number):Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/titres/${clientId}`);
+  }
 }

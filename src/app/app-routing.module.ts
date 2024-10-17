@@ -13,11 +13,13 @@ import { CdiComponent } from './cdi/cdi.component';
 import { RdiComponent } from './rdi/rdi.component';
 import { VeComponent } from './ve/ve.component';
 import { ReglementsComponent } from './reglement/reglement.component';
+import { ConsultingComponent } from './consulting/consulting.component';
 
 const routes: Routes = [
   { path: 'clients', component: ClientsComponent, data: { label: 'Clients' } },
   { path: 'titres', component: TitresComponent, data: { label: 'titres' } },
   { path: 'reglement', component: ReglementsComponent, data: { label: 'reglement' } },
+  { path: 'consulting', component: ConsultingComponent, data: { label: 'consulter les details' } },
   { path: '', redirectTo: 'clients', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
